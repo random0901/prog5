@@ -13,7 +13,7 @@ int main() {
 #pragma omp parallel for
 	for (i = 0; i < n; i++) {
 		srand(i);
-		arr[i] = (double)(rand() % 10000) / 10;
+		arr[i] = rand() % 10+ (rand()%100)*0.01;
 	}
 	printf("CGPA of students : ");
 	for (i = 0; i < n; i++)
